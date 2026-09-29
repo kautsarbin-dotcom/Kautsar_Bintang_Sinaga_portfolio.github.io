@@ -3,97 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kautsar Bintang Sinaga - Portfolio</title>
+    <title>Kautsar Bintang | Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <h1>Kautsar Bintang Sinaga</h1>
-            <h2>Business Intelligence Specialist</h2>
-            <p>Bridging technical implementation with commercial acumen through data analytics, database engineering, and full-stack systems analysis.</p>
-            <div class="contact-info">
-                <p>Email: Kautsarbin@Gmail.com | Tel: +6285283030221</p>
-            </div>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <p class="subtitle">PORTFOLIO 2026</p>
+            <h1>KAUTSAR BINTANG</h1>
+            <p class="role">Business Intelligence Specialist</p>
+        </div>
+        
+        <!-- FOTO PROFIL LU -->
+        <!-- Ganti 'profile.jpg' dengan nama file foto lu yang di-upload ke GitHub -->
+        <div class="hero-image">
+            <img src="profile.jpg" alt="Kautsar Bintang Sinaga">
         </div>
     </header>
 
-    <main>
-        <section id="education">
-            <h2 class="section-title">Education</h2>
-            <div class="card">
-                <h3>BINUS University</h3>
-                <p><strong>Bachelor of Information Systems, Business Intelligence</strong> (2024-2028) | GPA: 3.68</p>
-            </div>
-            <div class="card">
-                <h3>SMAN 7 Kota Tangerang Selatan</h3>
-                <p><strong>Natural Sciences</strong> (2021-2024)</p>
-            </div>
-        </section>
-
-        <section id="skills">
-            <h2 class="section-title">Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Data Analytics & BI</h3>
-                    <p>Tableau, Power BI, Power Query</p>
-                </div>
-                <div class="skill-category">
-                    <h3>Database Engineering</h3>
-                    <p>MS SQL Server, MySQL, Oracle DB</p>
-                </div>
-                <div class="skill-category">
-                    <h3>Programming</h3>
-                    <p>Python, ASP.NET C#</p>
-                </div>
-                <div class="skill-category">
-                    <h3>UI/UX & Operations</h3>
-                    <p>Figma, Financial Analytics, Inventory Management</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects">
-            <h2 class="section-title">Key Projects & Experience</h2>
+    <!-- About Section -->
+    <section class="section about-section">
+        <div class="container">
+            <h2 class="section-title">The Profile</h2>
+            <p class="bio">Bridging technical implementation with commercial acumen through data analytics, database engineering, and full-stack systems analysis.</p>
             
-            <div class="card">
-                <h3>Smartphones Historical Data Dashboard</h3>
-                <p>Built an interactive multi-chart Tableau dashboard featuring dynamic cross-filtering to analyze hardware correlations and brand market consolidation. Cleansed data via Power Query.</p>
+            <div class="grid-2">
+                <div class="info-block">
+                    <h3>BINUS University</h3>
+                    <p>Information Systems & Business Intelligence<br>2024 — 2028 | GPA: 3.68</p>
+                </div>
+                <div class="info-block">
+                    <h3>SMAN 7 Tangerang Selatan</h3>
+                    <p>Natural Sciences<br>2021 — 2024</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section (Lookbook Style) -->
+    <section class="section projects-section">
+        <div class="container">
+            <h2 class="section-title">Selected Works</h2>
+            
+            <!-- PROJECT 1 -->
+            <div class="project-item">
+                <!-- Ganti 'dashboard.jpg' dengan screenshot Tableau lu -->
+                <img src="dashboard.jpg" alt="Smartphones Dashboard" class="project-img">
+                <div class="project-info">
+                    <h3>01. Interactive Dashboard</h3>
+                    <p>Tableau & Power Query analysis of smartphone hardware correlations and brand market consolidation. Transformed raw historical datasets into strategic visual insights.</p>
+                </div>
             </div>
 
-            <div class="card">
-                <h3>BelanjaYuk & Furniland Marketplaces</h3>
-                <p>Delivered functional full-stack marketplace platforms using ASP.NET C# with MS SQL Server and PHP/MySQL. Engineered core consumer journeys, role-based access, and administrative dashboards.</p>
-            </div>
-
-            <div class="card">
-                <h3>BeresIN - Home Stewardship Platform</h3>
-                <p>Designed a premium home stewardship platform prototype. Conducted user research, persona creation, and UI/UX design using Figma.</p>
-            </div>
-
-            <div class="card">
-                <h3>Es Coklat Mantap - Franchise Owner</h3>
-                <p>Managed end-to-end retail F&B operations, handling inventory, cash flow reconciliation, and QRIS payment integration.</p>
+            <!-- PROJECT 2 (Posisi Gambar di Kanan) -->
+            <div class="project-item reverse">
+                <!-- Ganti 'beresin.jpg' dengan screenshot UI BeresIN lu -->
+                <img src="beresin.jpg" alt="BeresIN Platform" class="project-img">
+                <div class="project-info">
+                    <h3>02. BeresIN Prototype</h3>
+                    <p>A premium home stewardship platform prototype. Orchestrated end-to-end UI/UX design via Figma, including user research and persona creation.</p>
+                </div>
             </div>
             
-            <div class="card">
-                <h3>Project Leadership</h3>
-                <p>Served as Project Manager for PMB EXPO MT Al-Khawarizmi and LDK ROHIS, leading cross-functional teams, optimizing workflows, and driving target acquisition.</p>
+            <!-- PROJECT 3 -->
+            <div class="project-item">
+                <!-- Ganti 'web-dev.jpg' dengan screenshot web BelanjaYuk lu -->
+                <img src="web-dev.jpg" alt="Marketplace Platforms" class="project-img">
+                <div class="project-info">
+                    <h3>03. Full-Stack Marketplaces</h3>
+                    <p>Development of BelanjaYuk (ASP.NET C#) and Furniland (MySQL). Engineered core consumer journeys, role-based access, and administrative dashboards.</p>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="certifications">
-            <h2 class="section-title">Certifications</h2>
-            <ul>
-                <li>Applied Database Systems using Oracle AI Database (Oracle Academy)</li>
-                <li>Self-Paced Azure AI Basic Fundamental (Microsoft)</li>
-                <li>Business Case Competition Participant</li>
-            </ul>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Kautsar Bintang Sinaga. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <h2 class="section-title">Let's Connect</h2>
+        <p>Kautsarbin@Gmail.com</p>
+        <p>+62 852 8303 0221</p>
+        <p class="copyright">© 2026 Kautsar Bintang. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
