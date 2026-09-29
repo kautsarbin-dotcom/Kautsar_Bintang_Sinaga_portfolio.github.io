@@ -1,129 +1,226 @@
 :root {
-    --primary-dark-blue: #0A2540;
-    --secondary-blue: #1E3A8A;
-    --light-blue: #EFF6FF;
-    --white: #FFFFFF;
-    --text-dark: #333333;
-    --text-gray: #666666;
+    --dark-navy: #051024;
+    --white: #ffffff;
+    --off-white: #f9f9f9;
+    --gray: #777777;
 }
 
 body {
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6;
     margin: 0;
-    padding: 0;
-    background-color: var(--light-blue);
-    color: var(--text-dark);
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: var(--white);
+    color: var(--dark-navy);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
 }
 
-header {
-    background-color: var(--primary-dark-blue);
-    color: var(--white);
-    padding: 4rem 1rem;
-    text-align: center;
-    border-bottom: 5px solid var(--secondary-blue);
+/* Font Serif untuk Judul biar keliatan mahal/elegan */
+h1, h2, h3 {
+    font-family: 'Georgia', 'Times New Roman', serif; 
+    font-weight: normal;
+    margin: 0;
 }
 
-.header-content {
-    max-width: 800px;
+.container {
+    max-width: 1100px;
     margin: 0 auto;
+    padding: 0 2rem;
 }
 
-header h1 {
-    margin: 0 0 10px 0;
-    font-size: 2.5rem;
-    letter-spacing: 1px;
+/* Hero Section */
+.hero {
+    padding: 15vh 2rem 5vh;
+    text-align: center;
+    background-color: var(--white);
 }
 
-header h2 {
-    font-weight: 300;
-    color: #BFDBFE;
-    margin-bottom: 20px;
+.hero-content {
+    margin-bottom: 4rem;
 }
 
-.contact-info {
-    margin-top: 20px;
-    font-size: 0.9rem;
-    background-color: rgba(255, 255, 255, 0.1);
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 50px;
+.hero .subtitle {
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+    color: var(--gray);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
 }
 
-main {
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 0 1.5rem;
+.hero h1 {
+    font-size: clamp(3rem, 7vw, 6rem);
+    letter-spacing: 2px;
+    color: var(--dark-navy);
+    text-transform: uppercase;
+}
+
+.hero .role {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    font-style: italic;
+    color: var(--gray);
+    font-family: 'Georgia', serif;
+}
+
+.hero-image {
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* Ngasih efek sedikit pudar elegan, hilang kalau di-hover */
+    filter: grayscale(15%) contrast(110%);
+    transition: filter 0.5s ease;
+}
+
+.hero-image img:hover {
+    filter: grayscale(0%) contrast(100%);
+}
+
+/* Sections Global */
+.section {
+    padding: 8rem 0;
 }
 
 .section-title {
-    color: var(--primary-dark-blue);
-    border-bottom: 2px solid var(--primary-dark-blue);
-    padding-bottom: 10px;
-    margin-top: 2.5rem;
-    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 1px;
+    background-color: var(--dark-navy);
+    margin: 1.5rem auto 0;
+}
+
+/* About Section */
+.about-section {
+    background-color: var(--off-white);
+}
+
+.bio {
+    font-size: 1.8rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 5rem;
+    font-family: 'Georgia', serif;
+    color: var(--dark-navy);
+    line-height: 1.5;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    text-align: center;
+}
+
+.info-block h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.info-block p {
+    font-size: 0.9rem;
+    color: var(--gray);
     text-transform: uppercase;
-    font-size: 1.2rem;
     letter-spacing: 1px;
 }
 
-.card {
-    background: var(--white);
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    margin-bottom: 1.5rem;
-    border-left: 5px solid var(--secondary-blue);
-    transition: transform 0.2s ease;
-}
-
-.card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-}
-
-.card h3 {
-    margin-top: 0;
-    color: var(--secondary-blue);
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-}
-
-.skill-category {
-    background: var(--white);
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    text-align: center;
-    border-top: 4px solid var(--primary-dark-blue);
-}
-
-.skill-category h3 {
-    font-size: 1rem;
-    color: var(--secondary-blue);
-    margin-top: 0;
-}
-
-ul {
-    background: var(--white);
-    padding: 1.5rem 1.5rem 1.5rem 3rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-
-li {
-    margin-bottom: 10px;
-}
-
-footer {
-    text-align: center;
-    padding: 2rem 0;
-    background-color: var(--primary-dark-blue);
+/* Projects / Lookbook Section */
+.projects-section {
+    background-color: var(--dark-navy);
     color: var(--white);
+}
+
+.projects-section .section-title::after {
+    background-color: var(--white);
+}
+
+.project-item {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    margin-bottom: 8rem;
+}
+
+/* Bikin selang-seling Kiri-Kanan */
+.project-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.project-img {
+    flex: 1.2;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.project-info {
+    flex: 1;
+}
+
+.project-info h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+}
+
+.project-info p {
+    font-size: 1.1rem;
+    color: #cccccc;
+    max-width: 400px;
+    line-height: 1.8;
+}
+
+/* Footer */
+.footer {
+    padding: 8rem 2rem 4rem;
+    text-align: center;
+    background-color: var(--white);
+}
+
+.footer .section-title {
+    margin-bottom: 2rem;
+}
+
+.footer p {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Georgia', serif;
+}
+
+.footer .copyright {
+    font-size: 0.8rem;
+    color: var(--gray);
     margin-top: 4rem;
-    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+/* Biar rapi pas dibuka di HP */
+@media (max-width: 768px) {
+    .project-item, .project-item.reverse {
+        flex-direction: column;
+        gap: 2rem;
+        margin-bottom: 5rem;
+    }
+    .grid-2 {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .bio {
+        font-size: 1.3rem;
+    }
 }
